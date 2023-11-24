@@ -19,7 +19,7 @@ export const BorrowingCalculator = () => {
         <Box
           sx={{
             display: "grid",
-            gridTemplateColumns: "1fr 1fr",
+            gridTemplateColumns: { xs: "1f", md: "1fr 1fr" },
             width: "100%",
             height: "100%",
           }}
@@ -47,18 +47,20 @@ export const BorrowingCalculator = () => {
           </Box>
 
           {/* Photo */}
-          <Image
-            src="/green_leaves.jpg"
-            alt="Man masked by bushes"
-            width={500}
-            height={500}
-            style={{
-              height: "100%",
-              width: "100%",
-              objectFit: "cover",
-            }}
-            priority
-          />
+          <Box sx={{ display: { xs: "none", md: "block" } }}>
+            <Image
+              src="/green_leaves.jpg"
+              alt="Man masked by bushes"
+              width={500}
+              height={500}
+              style={{
+                height: "100%",
+                width: "100%",
+                objectFit: "cover",
+              }}
+              priority
+            />
+          </Box>
         </Box>
       </Box>
     </Container>
