@@ -12,7 +12,9 @@ const Flow = () => {
     setStep(step + 1);
   };
 
-  const stepBack = () => setStep(step != 0 ? step - 1 : 0);
+  const stepBack = () => {
+    setStep(step != 0 ? step - 1 : 0);
+  };
 
   switch (step) {
     case 0:
