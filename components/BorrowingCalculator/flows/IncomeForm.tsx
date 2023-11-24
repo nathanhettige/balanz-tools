@@ -3,7 +3,7 @@ import Input from "../../ui/Input";
 import { useCallback } from "react";
 import { BaseForm } from "./BaseForm";
 
-export const IncomeForm = () => {
+export const IncomeForm = ({ onNext }: { onNext: () => void }) => {
   const Form = useCallback(() => {
     return (
       <>
@@ -17,11 +17,11 @@ export const IncomeForm = () => {
 
   const Controls = useCallback(() => {
     return (
-      <Button variant="contained" size="large">
+      <Button variant="contained" size="large" onClick={onNext}>
         Next
       </Button>
     );
-  }, []);
+  }, [onNext]);
 
   return <BaseForm title="Income" controls={<Controls />} form={<Form />} />;
 };

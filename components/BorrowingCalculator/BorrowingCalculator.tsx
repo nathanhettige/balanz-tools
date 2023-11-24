@@ -1,10 +1,9 @@
 "use client";
 
-import { Box, Button } from "@mui/material";
+import { Box } from "@mui/material";
 import Image from "next/image";
-import { ReactNode, useCallback, useState } from "react";
-import { IncomeForm } from "./flows/IncomeForm";
-import { BaseForm } from "./flows/BaseForm";
+import { ReactNode } from "react";
+import Flow from "./Flow";
 
 export interface BorrowingCalculatorProps {
   title: string;
@@ -12,35 +11,6 @@ export interface BorrowingCalculatorProps {
 }
 
 export const BorrowingCalculator = () => {
-  const [step, setStep] = useState(2);
-
-  const stepForward = () => setStep(step + 1);
-  const stepBack = () => setStep(step != 0 ? step - 1 : 0);
-
-  const Steps = useCallback(() => {
-    switch (step) {
-      case 0:
-        return <IncomeForm />;
-
-      default:
-        return (
-          <BaseForm
-            title="Page not found"
-            form={<></>}
-            controls={
-              <Button
-                variant="contained"
-                size="large"
-                onClick={() => setStep(0)}
-              >
-                Back
-              </Button>
-            }
-          />
-        );
-    }
-  }, [step]);
-
   return (
     <Box
       sx={{ width: "80vw", height: "75%", bgcolor: "white", borderRadius: 2 }}
@@ -53,8 +23,8 @@ export const BorrowingCalculator = () => {
           height: "100%",
         }}
       >
-        {/* Steps */}
-        <Steps />
+        {/* Flow */}
+        <Flow />
 
         {/* Photo */}
         <Box sx={{ display: { xs: "none", md: "block" } }}>
