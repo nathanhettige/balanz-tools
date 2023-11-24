@@ -1,24 +1,20 @@
 "use client";
 
 import { Button } from "@mui/material";
-import { useState } from "react";
 import { BaseForm } from "./flows/BaseForm";
 import { IncomeForm } from "./flows/IncomeForm";
 
-const Flow = () => {
-  const [step, setStep] = useState(0);
+interface FlowProps {
+  step: number;
+  handleNext: () => void;
+  handleBack: () => void;
+  handleReset: () => void;
+}
 
-  const stepForward = () => {
-    setStep(step + 1);
-  };
-
-  const stepBack = () => {
-    setStep(step != 0 ? step - 1 : 0);
-  };
-
+const Flow = ({ step, handleNext, handleReset }: FlowProps) => {
   switch (step) {
     case 0:
-      return <IncomeForm onNext={stepForward} />;
+      return <IncomeForm onNext={handleNext} />;
 
     default:
       return (
@@ -26,7 +22,7 @@ const Flow = () => {
           title="Page not found"
           form={<></>}
           controls={
-            <Button variant="contained" size="large" onClick={() => setStep(0)}>
+            <Button variant="contained" size="large" onClick={handleReset}>
               Back
             </Button>
           }
