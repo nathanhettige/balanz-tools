@@ -1,6 +1,6 @@
-import { Stack } from "@mui/material";
+import { Container, Stack } from "@mui/material";
 import Header from "../../components/Header";
-import { BorrowingCalculator } from "../../components/BorrowingCalculator";
+import { BorrowingCalculator } from "../../components/BorrowingCalculator/BorrowingCalculator";
 
 export default function Home() {
   return (
@@ -16,7 +16,17 @@ export default function Home() {
         }}
       >
         <Header />
-        <BorrowingCalculator />
+        <Container
+          sx={{
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <BorrowingCalculator />
+        </Container>
       </Stack>
     </main>
   );
