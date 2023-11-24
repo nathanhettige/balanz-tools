@@ -13,7 +13,12 @@ export interface BorrowingCalculatorProps {
 export const BorrowingCalculator = () => {
   return (
     <Box
-      sx={{ width: "80vw", height: "75%", bgcolor: "white", borderRadius: 2 }}
+      sx={{
+        height: "100%",
+        width: "100%",
+        bgcolor: "white",
+        borderRadius: 2,
+      }}
     >
       <Box
         sx={{

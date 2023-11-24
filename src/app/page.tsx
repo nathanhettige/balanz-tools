@@ -1,12 +1,15 @@
-import { Container, Stack } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import Header from "../../components/Header";
 import { BorrowingCalculator } from "../../components/BorrowingCalculator/BorrowingCalculator";
+import Footer from "../../components/Footer";
 
 export default function Home() {
   return (
     <main>
-      <Stack
-        direction={"column"}
+      <Box
+        display={"grid"}
+        gridTemplateRows={{ xs: "auto 1fr auto" }}
+        gap={{ xs: 2 }}
         sx={{
           width: "100%",
           height: "100vh",
@@ -19,15 +22,17 @@ export default function Home() {
         <Container
           sx={{
             width: "100%",
-            height: "100%",
+            height: { xs: "80%", md: "100%" },
+            p: { md: 10 },
             display: "flex",
             justifyContent: "center",
-            alignItems: "center",
+            alignItems: { xs: "start", sm: "center" },
           }}
         >
           <BorrowingCalculator />
         </Container>
-      </Stack>
+        <Footer />
+      </Box>
     </main>
   );
 }
