@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Box from "@mui/material/Box";
 import "./globals.css";
 
 /* Mui Roboto font */
@@ -23,7 +24,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body style={{ margin: 0 }} className={inter.className}>
-        {children}
+        <main>
+          <Box
+            display={"grid"}
+            gridTemplateRows={{ xs: "auto 1fr auto" }}
+            gap={{ xs: 2 }}
+            sx={{
+              width: "100%",
+              height: "100vh",
+              padding: 0,
+              margin: 0,
+              backgroundColor: "lightgray",
+            }}
+          >
+            {children}
+          </Box>
+        </main>
       </body>
     </html>
   );
