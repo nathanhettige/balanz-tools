@@ -9,8 +9,9 @@ interface BaseFormProps {
 
 export const BaseForm = ({ title, form, controls }: BaseFormProps) => {
   return (
-    <Box px={5} py={5} display={"grid"} gridTemplateRows={"auto 1fr auto"}>
+    <Box p={5} display={"grid"} gridTemplateRows={"auto 1fr auto"} gap={3}>
       <Typography variant="h6">{title}</Typography>
+
       <Stack gap={2} justifyContent={"center"}>
         {form}
       </Stack>
