@@ -33,7 +33,7 @@ export default function RootLayout({
             gap={{ xs: 2 }}
             sx={{
               width: "100%",
-              height: "100vh",
+              minHeight: "100vh",
               padding: 0,
               margin: 0,
               backgroundColor: "lightgray",
