@@ -7,7 +7,6 @@ export default function Home() {
       sx={{
         width: "100%",
         height: { xs: "80%", md: "100%" },
-        minHeight: "250px",
         p: { md: 10 },
         display: "flex",
         justifyContent: "center",
