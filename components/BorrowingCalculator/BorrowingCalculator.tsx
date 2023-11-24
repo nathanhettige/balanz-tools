@@ -29,7 +29,7 @@ export const BorrowingCalculator = () => {
   return (
     <Box
       sx={{
-        minHeight: "300px",
+        minHeight: "350px",
         minWidth: "300px",
         height: "100%",
         width: "100%",
