@@ -19,7 +19,7 @@ const Flow = ({ step, handleNext, handleReset }: FlowProps) => {
     default:
       return (
         <BaseForm
-          title="Page not found"
+          title="Coming soon"
           form={<></>}
           controls={
             <Button variant="contained" size="large" onClick={handleReset}>

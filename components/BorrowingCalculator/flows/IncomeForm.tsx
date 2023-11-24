@@ -23,5 +23,7 @@ export const IncomeForm = ({ onNext }: { onNext: () => void }) => {
     );
   }, [onNext]);
 
-  return <BaseForm title="Income" controls={<Controls />} form={<Form />} />;
+  return (
+    <BaseForm title="Your Income" controls={<Controls />} form={<Form />} />
+  );
 };
