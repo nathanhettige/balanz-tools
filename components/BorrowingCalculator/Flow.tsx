@@ -8,8 +8,11 @@ import { IncomeForm } from "./flows/IncomeForm";
 const Flow = () => {
   const [step, setStep] = useState(0);
 
-  const stepForward = () => () => setStep(step + 1);
-  const stepBack = () => () => setStep(step != 0 ? step - 1 : 0);
+  const stepForward = () => {
+    setStep(step + 1);
+  };
+
+  const stepBack = () => setStep(step != 0 ? step - 1 : 0);
 
   switch (step) {
     case 0:
