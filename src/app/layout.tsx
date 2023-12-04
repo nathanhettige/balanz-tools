@@ -14,7 +14,7 @@ import Footer from "../../components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "GMH tools",
+  title: "Balanz tools",
   description: "me and boat got kicked out the yacht club",
 };
 
