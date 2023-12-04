@@ -55,7 +55,7 @@ export const BorrowingCalculator = () => {
                 <Box
                   px={2}
                   sx={{
-                    bgcolor: label === steps[step] ? "lightskyblue" : "none",
+                    bgcolor: label === steps[step] ? "F27223" : "none",
                     opacity: step >= index ? "1" : "0.5",
                     p: 1,
                     borderRadius: 2,

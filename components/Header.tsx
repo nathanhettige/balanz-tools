@@ -1,15 +1,25 @@
 import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
+import Image from "next/image";
 import Typography from "@mui/material/Typography";
 
 const Header = () => {
   return (
-    <AppBar position="static" sx={{ boxShadow: "none" }}>
+    <AppBar position="static" sx={{ boxShadow: "none", bgcolor: "#F1F1F1" }}>
       <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Balanz Tools
-        </Typography>
+        <Image
+          src="/logo.png"
+          alt="Logo"
+          width={500}
+          height={500}
+          style={{
+            height: "100%",
+            width: "auto",
+            // objectFit: "cover",
+          }}
+          priority
+        />
       </Toolbar>
     </AppBar>
   );
