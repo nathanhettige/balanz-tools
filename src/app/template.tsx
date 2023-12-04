@@ -23,7 +23,6 @@ export default function Template({ children }: { children: React.ReactNode }) {
       },
     },
   });
-  // const theme = createTheme();
 
   return (
     <ThemeProvider theme={theme}>

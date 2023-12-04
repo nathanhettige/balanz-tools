@@ -7,13 +7,21 @@ const Footer = () => {
       sx={{
         display: "flex",
         alignItems: "center",
-        bgcolor: "white",
+        bgcolor: "#F1F1F1",
         width: "100%",
       }}
     >
-      <Typography>Logo</Typography>
-      <Typography variant="body2">WRE</Typography>
-      <Typography variant="body2">$$ ADS $$</Typography>
+      <Image
+        src="/logo.png"
+        alt="Logo"
+        width={500}
+        height={500}
+        style={{
+          height: "50px",
+          width: "auto",
+        }}
+        priority
+      />
     </Stack>
   );
 };

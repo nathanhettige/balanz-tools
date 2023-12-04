@@ -2,7 +2,6 @@ import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Image from "next/image";
-import Typography from "@mui/material/Typography";
 
 const Header = () => {
   return (
